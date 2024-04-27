@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rippleui@1.12.1/dist/css/styles.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ingrid+Darling&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="./fonts.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body class="flex flex-col justify-center items-center h-screen">
+    <div>
+       <header class="pt-3 pr-4 pl-6 pb-5 flex flex-row items-center justify-between w-96 bg-amber-400">
+    <img src="./images/Vector (1).png" class="w-10" alt="dot">
+    <h1 class="text-2xl font-bold text-black">Burger Casablanca</h1>
+    <img src="./images/Vector.svg" class="w-10" alt="user">
+</header>
+<section class="flex flex-col bg-yellow-600 w-96 pt-5 justify-around">
+    <div class="flex flex-row justify-evenly">
+        <button class="flex flex-row  bg-orange-500 pt-1 pl-3 pr-3 pb-1 items-center rounded-lg justify-between border-2 active:bg-green-500 hover:bg-black font-white  hover:scale-110 transition-transform duration-1000 ease-in-out"><img src="./images/majesticons_burger.svg"> Burger</button>
+        <button class="flex flex-row bg-emerald-500 pt-1 pl-3 pr-3 pb-1 items-center rounded-lg justify-between border-2 active:bg-green-500 hover:bg-black font-white  hover:scale-110 transition-transform duration-1000 ease-in-out"><img src="./images/streamline-emojis_pizza-2.svg"> Pizza</button>
+        <button class="flex flex-row bg-blue-700 pt-1 pl-3 pr-3 pb-1 items-center rounded-lg justify-between border-2 active:bg-green-500 hover:bg-black font-white hover:scale-110 transition-transform duration-1000 ease-in-out"><img src="./images/noto_tropical-drink.svg"> Drink</button>
+    </div>
+</section>
+<section class="flex flex-col justify-center items-center bg-yellow-600 w-96 pt-0 pb-5 ">
+    <div class="flex flex-col bg-yellow-500 pt-4 pl-4 pr-4 pb-4 rounded-lg mt-5 gap-x-1.5 border-2">
+        <img class="hover:scale-110 transition-transform duration-1000 ease-in-out" src="./images/6cee589c2f553320ee93e5afced09766__1__1-removebg-preview.png" alt="burger">
+        <div class="dropdown-container justify-center pt-3">
+            <div class="dropdown" id="dropdown">
+                <label class="btn bg-amber-500 border-2 border-teal-800 text-sm font-bold hover:bg-amber-200 text-black font-medium " id="btnChoiseBurger" tabindex="0">Виберіть бургер:</label>
+                <div class="dropdown-menu dropdown-menu-bottom-center bg-amber-200 hover:bg-amber-200 text-black">
+                    <select id="burgerSize" class="dropdown-item text-sm bg-transparent hover:bg-amber-200 text-black"">
+                        <option value="small"  class="hover: bg-none">Маленький бургер 50грн</option>
+                        <option value="big"  class="hover: bg-none">Великий бургер 100грн</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown-container justify-center pt-3">
+            <div class="dropdown">
+                <label class="btn bg-amber-500 border-2 border-teal-800 text-sm hover:bg-amber-200 text-black font-medium" tabindex="0">Виберіть начинку:</label>
+                <div class="dropdown-menu dropdown-menu-bottom-center bg-amber-200 hover:bg-amber-200 text-black">
+                    <select id="burgerStuffing" class="dropdown-item text-sm bg-transparent hover:bg-amber-200 text-black"">
+                        <option value="cheese" class="hover: bg-none items-center">З сиром 10грн</option>
+                        <option value="salad" class="hover: bg-none">З салатом 20грн</option>
+                        <option value="potato" class="hover: bg-none">З картоплею 15грн</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+       
+        <div class="dropdown-container justify-center pt-3">
+            <div class="dropdown">
+                <label class="btn bg-amber-500 border-2 border-teal-800 text-sm hover:bg-amber-200 text-black font-medium" tabindex="0">Виберіть начинку:</label>
+                <div class="dropdown-menu dropdown-menu-bottom-center bg-amber-200 hover:bg-amber-200 text-black">
+                    <select id="burgerToppings" class="dropdown-item text-sm bg-transparent hover:bg-amber-200 text-black"">
+                        <option value="mayo" class="hover:bg-none">Додати майонез 10грн</option>
+                        <option value="seasoning" class="hover: bg-none">Додати приправу 15грн</option>
+                        
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="flex flex-col justify-center items-center bg-yellow-600 w-96 pt-0 pb-5  ">
+    <button id="calculateBtn" class="btn btn-solid-warning  mb-4 text-sm hover:bg-slate-800 text-white ">Розрахуйте</button>
+    <div class="bg-red-600 pt-3 pl-3 pr-3 pb-3 text-black font-extrabold ">Гамбургер стандартный йде з сиром, тому ціна рахується з додаванням сиру!!!</div>
+</footer> 
+    </div>
+
+<script src="./hamburger.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>
