@@ -10,7 +10,7 @@ class Hamburger {
             salad: 20,
             potato: 15,
             mayo: 10,
-            seasoning: 15
+            seasoning: 15,
         };
         this.caloriesTable = {
             small: 20,
