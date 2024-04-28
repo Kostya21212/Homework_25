@@ -1,4 +1,3 @@
-
 class Hamburger {
     constructor(size, stuffing) {
         this.size = size;
@@ -10,7 +9,7 @@ class Hamburger {
             cheese: 10,
             salad: 20,
             potato: 15,
-            mayonez: 10,
+            mayo: 10,
             seasoning: 15
         };
         this.caloriesTable = {
@@ -19,7 +18,7 @@ class Hamburger {
             cheese: 20,
             salad: 5,
             potato: 10,
-            mayonez: 5,
+            mayo: 5,
             seasoning: 0
         };
     }
@@ -29,11 +28,11 @@ class Hamburger {
     }
 
     calculatePrice() {
-        let price = this.prices[this.size] + this.prices[this.stuffing];
-        this.toppings.forEach(topping => {
-            price += this.prices[topping];
-        });
-        return price;
+        let price = this.prices[this.size] + this.prices[this.stuffing]+  this.toppings
+        .map((topping) => this.prices[topping])
+        .reduce((a, b) => a + b, 0)
+    return price
+        
     }
 
     calculateCalories() {
@@ -48,23 +47,21 @@ class Hamburger {
 document.getElementById("calculateBtn").addEventListener("click", function() {
     const size = document.getElementById('burgerSize').value;
     const stuffing = document.getElementById('burgerStuffing').value;
-    const toppings = Array.from(document.getElementById('burgerToppings').selectedOptions).map(option => option.value);
-
-    if (toppings.length === 0) {
-        const confirmResult = confirm("Вибір додаткових інгредієнтів залишиться порожнім. Продовжити без додаткових інгредієнтів?");
-        if (!confirmResult) {
-            return;
-        }
-    }
+    const mayoChecked = document.getElementById('mayo').checked;
+    const seasoningChecked = document.getElementById('seasoning').checked;
 
     const hamburger = new Hamburger(size, stuffing);
 
-    toppings.forEach(topping => {
-        hamburger.addTopping(topping);
-    });
+    if (mayoChecked) {
+        hamburger.addTopping('mayo');
+    }
+
+    if (seasoningChecked) {
+        hamburger.addTopping('seasoning');
+    }
 
     const price = hamburger.calculatePrice();
     const calories = hamburger.calculateCalories();
 
-    alert(`Вартість бургера: ${price} грн\nКалорійність бургера: ${calories} калорій`);
+    alert(`Стоимость бургера: ${price} грн\nКалорийность бургера: ${calories} калорий`);
 });

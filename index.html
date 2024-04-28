@@ -28,12 +28,12 @@
 </section>
 <section class="flex flex-col justify-center items-center bg-yellow-600 w-96 pt-0 pb-5 ">
     <div class="flex flex-col bg-yellow-500 pt-4 pl-4 pr-4 pb-4 rounded-lg mt-5 gap-x-1.5 border-2">
-        <img class="hover:scale-110 transition-transform duration-1000 ease-in-out" src="./images/6cee589c2f553320ee93e5afced09766__1__1-removebg-preview.png" alt="burger">
+        <img class="hover:scale-90 transition-transform duration-1000 ease-in-out" src="./images/6cee589c2f553320ee93e5afced09766__1__1-removebg-preview.png" alt="burger">
         <div class="dropdown-container justify-center pt-3">
             <div class="dropdown" id="dropdown">
-                <label class="btn bg-amber-500 border-2 border-teal-800 text-sm font-bold hover:bg-amber-200 text-black font-medium " id="btnChoiseBurger" tabindex="0">Виберіть бургер:</label>
+                <label class="btn bg-amber-500 border-2 border-teal-800 text-sm font-bold hover:bg-amber-200 text-black font-medium " id="btnChoiseBurger" tabindex="0">Выберите размер бургера:</label>
                 <div class="dropdown-menu dropdown-menu-bottom-center bg-amber-200 hover:bg-amber-200 text-black">
-                    <select id="burgerSize" class="dropdown-item text-sm bg-transparent hover:bg-amber-200 text-black"">
+                    <select id="burgerSize" class="dropdown-item text-sm bg-transparent hover:bg-amber-200 text-black">
                         <option value="small"  class="hover: bg-none">Маленький бургер 50грн</option>
                         <option value="big"  class="hover: bg-none">Великий бургер 100грн</option>
                     </select>
@@ -42,31 +42,29 @@
         </div>
         <div class="dropdown-container justify-center pt-3">
             <div class="dropdown">
-                <label class="btn bg-amber-500 border-2 border-teal-800 text-sm hover:bg-amber-200 text-black font-medium" tabindex="0">Виберіть начинку:</label>
+                <label class="btn bg-amber-500 border-2 border-teal-800 text-sm hover:bg-amber-200 text-black font-medium" tabindex="0">Выберите начинку:</label>
                 <div class="dropdown-menu dropdown-menu-bottom-center bg-amber-200 hover:bg-amber-200 text-black">
-                    <select id="burgerStuffing" class="dropdown-item text-sm bg-transparent hover:bg-amber-200 text-black"">
-                        <option value="cheese" class="hover: bg-none items-center">З сиром 10грн</option>
-                        <option value="salad" class="hover: bg-none">З салатом 20грн</option>
-                        <option value="potato" class="hover: bg-none">З картоплею 15грн</option>
+                    <select id="burgerStuffing" class="dropdown-item text-sm bg-transparent hover:bg-amber-200 text-black">
+                        <option value="cheese" class="hover: bg-none items-center">С сыром 10грн</option>
+                        <option value="salad" class="hover: bg-none">С салатом 20грн</option>
+                        <option value="potato" class="hover: bg-none">С картофелем 15грн</option>
                     </select>
                 </div>
             </div>
         </div>
        
-        <div class="dropdown-container justify-center pt-3">
-            <div class="dropdown">
-                <label class="btn bg-amber-500 border-2 border-teal-800 text-sm hover:bg-amber-200 text-black font-medium" tabindex="0">Виберіть начинку:</label>
-                <div class="dropdown-menu dropdown-menu-bottom-center bg-amber-200 hover:bg-amber-200 text-black">
-                    <select id="burgerToppings" class="dropdown-item text-sm bg-transparent hover:bg-amber-200 text-black"">
-                        <option value="mayo" class="hover:bg-none">Додати майонез 10грн</option>
-                        <option value="seasoning" class="hover: bg-none">Додати приправу 15грн</option>
-                        
-                    </select>
+    
+                <div class="flex flex-row pt-5">
+                    <input type="checkbox" id="mayo" class="checkbox-item" value="mayo">
+                    <label for="mayo"><p class="pl-3 pr-3">Майонез 10грн</p></label><br>
+                    <input type="checkbox" id="seasoning" class="checkbox-item" value="seasoning">
+                    <label for="seasoning" class="pl-3 pr-3">Приправа 15грн</label>
                 </div>
-            </div>
-        </div>
+            
+        
     </div>
 </section>
+
 <footer class="flex flex-col justify-center items-center bg-yellow-600 w-96 pt-0 pb-5  ">
     <button id="calculateBtn" class="btn btn-solid-warning  mb-4 text-sm hover:bg-slate-800 text-white ">Розрахуйте</button>
     <div class="bg-red-600 pt-3 pl-3 pr-3 pb-3 text-black font-extrabold ">Гамбургер стандартный йде з сиром, тому ціна рахується з додаванням сиру!!!</div>
